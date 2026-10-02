@@ -1,0 +1,247 @@
+{
+  "generated_at": "2026-10-02T00:31:22Z",
+  "packages": {
+    "app": {
+      "dependencies": [
+        "click",
+        "core",
+        "coverage",
+        "pytest"
+      ],
+      "editable": true,
+      "group": "main",
+      "marker": null,
+      "source": "local",
+      "source_detail": {
+        "path": "packages/app",
+        "workspace_member": true,
+        "default_groups": ["test"]
+      },
+      "version": "0.1.0"
+    },
+    "certifi": {
+      "dependencies": [],
+      "group": "main",
+      "marker": null,
+      "source": "registry",
+      "source_detail": {
+        "registry": "https://pypi.org/simple"
+      },
+      "version": "2024.12.14"
+    },
+    "charset-normalizer": {
+      "dependencies": [],
+      "group": "main",
+      "marker": null,
+      "source": "registry",
+      "source_detail": {
+        "registry": "https://pypi.org/simple"
+      },
+      "version": "3.4.1"
+    },
+    "click": {
+      "dependencies": [
+        "colorama"
+      ],
+      "group": "main",
+      "marker": null,
+      "source": "registry",
+      "source_detail": {
+        "registry": "https://pypi.org/simple"
+      },
+      "version": "8.1.8"
+    },
+    "colorama": {
+      "dependencies": [],
+      "group": "main",
+      "marker": "sys_platform == 'win32'",
+      "source": "registry",
+      "source_detail": {
+        "registry": "https://pypi.org/simple"
+      },
+      "version": "0.4.6"
+    },
+    "core": {
+      "dependencies": [
+        "requests",
+        "coverage",
+        "mkdocs",
+        "pytest"
+      ],
+      "editable": true,
+      "group": "main",
+      "marker": null,
+      "source": "local",
+      "source_detail": {
+        "path": "packages/core",
+        "workspace_member": true,
+        "default_groups": ["dev"]
+      },
+      "version": "0.1.0"
+    },
+    "coverage": {
+      "dependencies": [],
+      "group": "dev",
+      "marker": null,
+      "source": "registry",
+      "source_detail": {
+        "registry": "https://pypi.org/simple"
+      },
+      "version": "7.6.10"
+    },
+    "idna": {
+      "dependencies": [],
+      "group": "main",
+      "marker": null,
+      "source": "registry",
+      "source_detail": {
+        "registry": "https://pypi.org/simple"
+      },
+      "version": "3.10"
+    },
+    "iniconfig": {
+      "dependencies": [],
+      "group": "main",
+      "marker": null,
+      "source": "registry",
+      "source_detail": {
+        "registry": "https://pypi.org/simple"
+      },
+      "version": "2.0.0"
+    },
+    "markdown": {
+      "dependencies": [],
+      "group": "docs",
+      "marker": "python_full_version >= '3.10'",
+      "source": "registry",
+      "source_detail": {
+        "registry": "https://pypi.org/simple"
+      },
+      "version": "3.7"
+    },
+    "mkdocs": {
+      "dependencies": [
+        "markdown",
+        "pyyaml"
+      ],
+      "group": "docs",
+      "marker": "python_full_version >= '3.10'",
+      "source": "registry",
+      "source_detail": {
+        "python_versions": ">=3.10",
+        "registry": "https://pypi.org/simple",
+        "uv_group_python_req": ">=3.10"
+      },
+      "version": "1.6.1"
+    },
+    "packaging": {
+      "dependencies": [],
+      "group": "main",
+      "marker": null,
+      "source": "registry",
+      "source_detail": {
+        "registry": "https://pypi.org/simple"
+      },
+      "version": "24.2"
+    },
+    "pluggy": {
+      "dependencies": [],
+      "group": "main",
+      "marker": null,
+      "source": "registry",
+      "source_detail": {
+        "registry": "https://pypi.org/simple"
+      },
+      "version": "1.5.0"
+    },
+    "pytest": {
+      "dependencies": [
+        "iniconfig",
+        "packaging",
+        "pluggy"
+      ],
+      "group": "dev",
+      "marker": null,
+      "source": "registry",
+      "source_detail": {
+        "registry": "https://pypi.org/simple"
+      },
+      "version": "8.3.5"
+    },
+    "pyyaml": {
+      "dependencies": [],
+      "group": "docs",
+      "marker": "python_full_version >= '3.10'",
+      "source": "registry",
+      "source_detail": {
+        "registry": "https://pypi.org/simple"
+      },
+      "version": "6.0.2"
+    },
+    "requests": {
+      "dependencies": [
+        "certifi",
+        "charset-normalizer",
+        "idna",
+        "urllib3"
+      ],
+      "group": "main",
+      "marker": null,
+      "source": "registry",
+      "source_detail": {
+        "registry": "https://pypi.org/simple"
+      },
+      "version": "2.32.3"
+    },
+    "urllib3": {
+      "dependencies": [],
+      "group": "main",
+      "marker": null,
+      "source": "registry",
+      "source_detail": {
+        "registry": "https://pypi.org/simple"
+      },
+      "version": "2.3.0"
+    }
+  },
+  "pm": "uv",
+  "pm_version_tested": "0.12.22",
+  "project_metadata": {
+    "groups": [
+      "dev",
+      "docs",
+      "main",
+      "test"
+    ],
+    "python_constraint": ">=3.9",
+    "uv_0_12_22_features": {
+      "default_groups_per_member": {
+        "app": ["test"],
+        "core": ["dev"]
+      },
+      "group_python_requirements": {
+        "core.docs": ">=3.10"
+      }
+    },
+    "uv_workspace_members": [
+      "packages/app",
+      "packages/core"
+    ]
+  },
+  "root": {
+    "dependencies": [
+      "app",
+      "core"
+    ],
+    "name": "workspace",
+    "version": "0.0.0"
+  },
+  "schema_version": "1.1",
+  "source_file": "uv.lock",
+  "warnings": [
+    "pytest appears in both 'dev' group (core member default) and 'test' group (app member default); attributed to 'dev' (first lockfile walk attribution). Downstream comparator should accept either group label for pytest.",
+    "colorama is a conditional transitive of click with marker sys_platform == 'win32'; may be absent on non-Windows scan hosts.",
+    "mkdocs and its transitives (markdown, pyyaml) carry marker python_full_version >= '3.10' from the docs group Python requirement introduced in uv 0.12.22; these packages may be absent if the scan host runs Python <3.10.",
+    "core.dependencies lists both main and dev/docs group packages because Mend's UA resolves the shared uv.lock without per-member group filtering; the expected tree encodes the full lockfile closure."
+  ]
+}
