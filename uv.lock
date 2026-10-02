@@ -1,0 +1,309 @@
+version = 1
+requires-python = ">=3.9"
+
+[options]
+exclude-newer = "2025-01-15T00:00:00Z"
+
+[[package]]
+name = "app"
+version = "0.1.0"
+source = { editable = "packages/app" }
+dependencies = [
+    { name = "click" },
+    { name = "core" },
+]
+
+[package.dev-dependencies]
+test = [
+    { name = "pytest" },
+]
+
+[package.metadata]
+requires-dist = [
+    { name = "click", specifier = ">=8.1.8" },
+    { name = "core" },
+]
+requires-dist-dev = { test = [{ name = "pytest", specifier = ">=8.3.5" }] }
+
+[package.metadata.default-groups]
+default-groups = ["test"]
+
+[[package]]
+name = "certifi"
+version = "2024.12.14"
+source = { registry = "https://pypi.org/simple" }
+
+[package.sdist]
+url = "https://files.pythonhosted.org/packages/certifi/certifi-2024.12.14.tar.gz"
+hash = "sha256:b650d30f370c2b724812bee08008be0c4163b163ddaec3f2546c1caf65f191db"
+size = 166010
+
+[[package.wheels]]
+url = "https://files.pythonhosted.org/packages/certifi/certifi-2024.12.14-py3-none-any.whl"
+hash = "sha256:1275f7a45be9464efc1173084eaa30f866fe2e47d389406136d332ed4967ec56"
+size = 164493
+
+[[package]]
+name = "charset-normalizer"
+version = "3.4.1"
+source = { registry = "https://pypi.org/simple" }
+
+[package.sdist]
+url = "https://files.pythonhosted.org/packages/charset_normalizer/charset_normalizer-3.4.1.tar.gz"
+hash = "sha256:44251f18cd68a75b56585dd00dae26183e102cd5e0f9f1466e6df5da2ed64ea3"
+size = 123100
+
+[[package.wheels]]
+url = "https://files.pythonhosted.org/packages/charset_normalizer/charset_normalizer-3.4.1-py3-none-any.whl"
+hash = "sha256:d98b1668f06378c6dbefec3b92299716b931cd4e6061f3c875a71ced1780ab85"
+size = 49213
+
+[[package]]
+name = "click"
+version = "8.1.8"
+source = { registry = "https://pypi.org/simple" }
+dependencies = [
+    { name = "colorama", marker = "sys_platform == 'win32'" },
+]
+
+[package.sdist]
+url = "https://files.pythonhosted.org/packages/click/click-8.1.8.tar.gz"
+hash = "sha256:ed53c9d8a4567b8e25851f5ef6e8d8f3f9f4e3c42523a4955bb9455e5a3b2b26"
+size = 226593
+
+[[package.wheels]]
+url = "https://files.pythonhosted.org/packages/click/click-8.1.8-py3-none-any.whl"
+hash = "sha256:63c132bbbed01578a06712a2d1f497bb62d9c1c0d329b7903a866228027263b2"
+size = 98188
+
+[[package]]
+name = "colorama"
+version = "0.4.6"
+source = { registry = "https://pypi.org/simple" }
+
+[package.sdist]
+url = "https://files.pythonhosted.org/packages/colorama/colorama-0.4.6.tar.gz"
+hash = "sha256:08695f5cb7ed6e0531a20572697297d14f6b0668dds3f61e24a0a5dddd40f99"
+size = 27697
+
+[[package.wheels]]
+url = "https://files.pythonhosted.org/packages/colorama/colorama-0.4.6-py2.py3-none-any.whl"
+hash = "sha256:4f1d9991f5acc0ca119f9d443620b77f9d6b33703e51011c16baf57afb285fc6"
+size = 25335
+
+[[package]]
+name = "core"
+version = "0.1.0"
+source = { editable = "packages/core" }
+dependencies = [
+    { name = "requests" },
+]
+
+[package.dev-dependencies]
+dev = [
+    { name = "coverage" },
+    { name = "pytest" },
+]
+docs = [
+    { name = "mkdocs", marker = "python_full_version >= '3.10'" },
+]
+
+[package.metadata]
+requires-dist = [
+    { name = "requests", specifier = ">=2.32.3" },
+]
+requires-dist-dev = {
+    dev = [
+        { name = "coverage", specifier = ">=7.6.10" },
+        { name = "pytest", specifier = ">=8.3.5" },
+    ],
+    docs = [
+        { name = "mkdocs", specifier = ">=1.6.1" },
+    ],
+}
+
+[package.metadata.default-groups]
+default-groups = ["dev"]
+
+[package.metadata.requires-python-per-group]
+docs = ">=3.10"
+
+[[package]]
+name = "coverage"
+version = "7.6.10"
+source = { registry = "https://pypi.org/simple" }
+
+[package.sdist]
+url = "https://files.pythonhosted.org/packages/coverage/coverage-7.6.10.tar.gz"
+hash = "sha256:9f0b8f37f62c739c3f4b2a6cce52ef4e5c4ef3b40c3c30b5b9a1b2d3d9c6d8a"
+size = 801894
+
+[[package.wheels]]
+url = "https://files.pythonhosted.org/packages/coverage/coverage-7.6.10-py3-none-any.whl"
+hash = "sha256:4d6b66b87a2f41efa36e43a5de8f98dde7c2b0eb8ca0697c82b5f3e7a17c0a8"
+size = 68678
+
+[[package]]
+name = "idna"
+version = "3.10"
+source = { registry = "https://pypi.org/simple" }
+
+[package.sdist]
+url = "https://files.pythonhosted.org/packages/idna/idna-3.10.tar.gz"
+hash = "sha256:12f65c9b470abda6dc35cf5e1d1317a3a7ac77d6fc4f0ccc67b35f4b12eb83c3"
+size = 190490
+
+[[package.wheels]]
+url = "https://files.pythonhosted.org/packages/idna/idna-3.10-py3-none-any.whl"
+hash = "sha256:946d195a0d259cbba61165e88e65941f16e9b36ea6ddb97f00452bae8b1287d3"
+size = 70442
+
+[[package]]
+name = "iniconfig"
+version = "2.0.0"
+source = { registry = "https://pypi.org/simple" }
+
+[package.sdist]
+url = "https://files.pythonhosted.org/packages/iniconfig/iniconfig-2.0.0.tar.gz"
+hash = "sha256:2d91e135bf72d31a410b17c16da610a82e7eb0b8e0b52b5218e24c4d37bcfa5e"
+size = 4646
+
+[[package.wheels]]
+url = "https://files.pythonhosted.org/packages/iniconfig/iniconfig-2.0.0-py3-none-any.whl"
+hash = "sha256:b6a85871a79d2e3b22d2d1b94ac2824226a63c6b741c88f7ae975f18b6778374"
+size = 5892
+
+[[package]]
+name = "markdown"
+version = "3.7"
+source = { registry = "https://pypi.org/simple" }
+
+[package.sdist]
+url = "https://files.pythonhosted.org/packages/markdown/Markdown-3.7.tar.gz"
+hash = "sha256:2ae2471477cfd02dbbf038d5d9bc226d40def3407dde24d5c6cc578c4c7d0517"
+size = 354715
+
+[[package.wheels]]
+url = "https://files.pythonhosted.org/packages/markdown/Markdown-3.7-py3-none-any.whl"
+hash = "sha256:1707a2eda33e04f85f5a9f8b0dab1a87d6471e8be83b0e89e3e0d5f2ef3e0e51"
+size = 106226
+
+[[package]]
+name = "mkdocs"
+version = "1.6.1"
+source = { registry = "https://pypi.org/simple" }
+dependencies = [
+    { name = "markdown" },
+    { name = "pyyaml" },
+]
+
+[package.sdist]
+url = "https://files.pythonhosted.org/packages/mkdocs/mkdocs-1.6.1.tar.gz"
+hash = "sha256:a73f735824ef4ae0c3c9564b35978d916d879e9df1ae9fbb50dc7297b1ee2a36"
+size = 3386538
+
+[[package.wheels]]
+url = "https://files.pythonhosted.org/packages/mkdocs/mkdocs-1.6.1-py3-none-any.whl"
+hash = "sha256:b18e99c3da6c6cce9e84d05f3f7a4e5a2cfaff9e7a3b5c2a4fbf6daba5a3b43"
+size = 3874186
+
+[[package]]
+name = "packaging"
+version = "24.2"
+source = { registry = "https://pypi.org/simple" }
+
+[package.sdist]
+url = "https://files.pythonhosted.org/packages/packaging/packaging-24.2.tar.gz"
+hash = "sha256:c228a6dc5e932d346bc5739379109d49e8853dd8223571c7c5b55260edc0b97f"
+size = 163950
+
+[[package.wheels]]
+url = "https://files.pythonhosted.org/packages/packaging/packaging-24.2-py3-none-any.whl"
+hash = "sha256:09abb1bccd265c01f4a3aa3f7a7db064b36514d2cba19a2f694a761cefc3053e"
+size = 65451
+
+[[package]]
+name = "pluggy"
+version = "1.5.0"
+source = { registry = "https://pypi.org/simple" }
+
+[package.sdist]
+url = "https://files.pythonhosted.org/packages/pluggy/pluggy-1.5.0.tar.gz"
+hash = "sha256:2cffa88e94fdc978c4c574f15f9e59b7f4201d439195c3715ca9e2486f1d0cf1"
+size = 67955
+
+[[package.wheels]]
+url = "https://files.pythonhosted.org/packages/pluggy/pluggy-1.5.0-py3-none-any.whl"
+hash = "sha256:44e1ad92c8ca002de6377e165f3e0f1be63266ab4d554740532335b9d75ea669"
+size = 20556
+
+[[package]]
+name = "pytest"
+version = "8.3.5"
+source = { registry = "https://pypi.org/simple" }
+dependencies = [
+    { name = "iniconfig" },
+    { name = "packaging" },
+    { name = "pluggy" },
+]
+
+[package.sdist]
+url = "https://files.pythonhosted.org/packages/pytest/pytest-8.3.5.tar.gz"
+hash = "sha256:f4efe70cc14e511565ac476b57c279e12a855b11f48f212af1080ef2263d3845"
+size = 1455580
+
+[[package.wheels]]
+url = "https://files.pythonhosted.org/packages/pytest/pytest-8.3.5-py3-none-any.whl"
+hash = "sha256:c69214aa41edb94aa8cf2efbe4b1f2a57e22b507e89b789dae9dd30e0c4af41e"
+size = 343795
+
+[[package]]
+name = "pyyaml"
+version = "6.0.2"
+source = { registry = "https://pypi.org/simple" }
+
+[package.sdist]
+url = "https://files.pythonhosted.org/packages/pyyaml/PyYAML-6.0.2.tar.gz"
+hash = "sha256:d584d9ec91ad65861cc08d42e834324ef890a082e591037abe114850ff7bbc3e"
+size = 130631
+
+[[package.wheels]]
+url = "https://files.pythonhosted.org/packages/pyyaml/PyYAML-6.0.2-py3-none-any.whl"
+hash = "sha256:6b9a2c9b0c02e10ad1fe21d55fb5a99bd98a87fb1d0c77b44b3a7c27a3db7e0"
+size = 86234
+
+[[package]]
+name = "requests"
+version = "2.32.3"
+source = { registry = "https://pypi.org/simple" }
+dependencies = [
+    { name = "certifi" },
+    { name = "charset-normalizer" },
+    { name = "idna" },
+    { name = "urllib3" },
+]
+
+[package.sdist]
+url = "https://files.pythonhosted.org/packages/requests/requests-2.32.3.tar.gz"
+hash = "sha256:55365417734eb18255590a9f9f48b9b8f7f56b5516e73e62b4c22b72b8a18dd2"
+size = 131218
+
+[[package.wheels]]
+url = "https://files.pythonhosted.org/packages/requests/requests-2.32.3-py3-none-any.whl"
+hash = "sha256:70761cfe03c773ceb22aa2f671b4757976145175cdfca038c02654d061d6dcc6"
+size = 64928
+
+[[package]]
+name = "urllib3"
+version = "2.3.0"
+source = { registry = "https://pypi.org/simple" }
+
+[package.sdist]
+url = "https://files.pythonhosted.org/packages/urllib3/urllib3-2.3.0.tar.gz"
+hash = "sha256:f8cd6e7b19f4b4c7d9abaf8ed4d2b5edc1c85c7db3d3a9d2d8e3f5d5c9e0be2"
+size = 300613
+
+[[package.wheels]]
+url = "https://files.pythonhosted.org/packages/urllib3/urllib3-2.3.0-py3-none-any.whl"
+hash = "sha256:1cee9ad369867b58ba8bde3fa0e3c803e4634e8b5e9a3f6ff9f6ae8736ecf7e4"
+size = 128369
