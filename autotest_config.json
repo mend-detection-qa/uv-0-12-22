@@ -1,6 +1,6 @@
 {
   "description": "Autotest configuration file for dependency tree detection validation",
-  "version": 1.12,
+  "version": 1.8,
   "base_config": {
     "validate_scan_output": true,
     "_comment_validate_scan_output": "Whether to validate the scan output/exit code. Options: true | false. Default: true",
@@ -8,7 +8,7 @@
       "_security_scan_report_conclusion": "success",
       "_comment_security_scan_report_conclusion": "Optional. Expected scan report conclusion. Options: 'success' | 'failure'. This validates the security scan result status. If not provided, this check will not be performed.",
       "total_libs_scanned": {
-        "gte": 7
+        "gte": 13
       },
       "_comment_total_libs_scanned": "Optional. Expected number of libraries scanned with comparison operator. Validates that the scan processed libraries. If not provided, this check will not be performed.",
       "expected_messages": [],
@@ -25,13 +25,13 @@
       "check_update_request_sca_results": true,
       "_comment_check_update_request_sca_results": "Whether to validate extraProperties.scaResults from the update request. Parses scaResults as JSON and asserts: (1) totalFail is empty {}, (2) no results entry has level 'ERROR'. Options: true | false. Default: false",
       "expected_total_dependencies_number": {
-        "gte": 6
+        "gte": 13
       },
       "expected_direct_dependencies_number": {
         "eq": 2
       },
       "expected_transitive_dependencies_number": {
-        "gte": 4
+        "gte": 11
       },
       "_comment_expected_dependencies_number": "Optional. Expected number of dependencies with comparison operator. Operators: gt (>), gte (>=), lt (<), lte (<=), eq (==). If not provided, this check will not be performed.",
       "direct_dependencies_names_list": {
@@ -45,13 +45,17 @@
           "certifi",
           "charset-normalizer",
           "click",
-          "colorama",
+          "coverage",
           "idna",
+          "iniconfig",
+          "packaging",
+          "pluggy",
+          "pytest",
           "requests",
           "urllib3"
         ]
       },
-      "_comment_dependencies_names_list": "Optional. Check specific libraries in direct dependencies. Operators: eq (==), contains (all items from expected list in actual), in(all items from actual list in expected), nin(actual list does not contain provided libs). If not provided, this check will not be performed.",
+      "_comment_dependencies_names_list": "Optional. Check specific libraries in direct dependencies. Operators: eq (==), contains (all items from expected list in actual), in(all items from actual list in expected), nin(actual list does not contain provided libs). If not provided, this check will not be performed. Note: colorama excluded as it is platform-conditional (sys_platform=='win32'). mkdocs/markdown/pyyaml excluded as they are conditional on python_full_version>=3.10 per the docs group Python requirement introduced in uv 0.12.22.",
       "expected_package_managers": {
         "contains": [
           "uv"
